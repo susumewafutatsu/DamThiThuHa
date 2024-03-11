@@ -69,7 +69,7 @@ public class CollisionChecker {
                     case "up":
                         entity.soliArea.y -= entity.speed;
                         if (entity.soliArea.intersects(gp.obj[i].soliArea)){
-                            if (gp.obj[i].collison == true )
+
                         }
                         break;
                     case "down":
