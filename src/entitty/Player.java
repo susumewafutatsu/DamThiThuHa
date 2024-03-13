@@ -14,7 +14,7 @@ import javax.imageio.ImageIO;
  * @author arima
  */
 public class Player extends Entity{
-    GamePanel gp;
+
     KeyHandler keyH;
 
     public final int screenX;
@@ -22,8 +22,9 @@ public class Player extends Entity{
 
     public Player(GamePanel gp, KeyHandler keyH){
 
-        this.gp = gp;
+        super(gp);
         this.keyH = keyH;
+
         screenX = gp.screenWidth/2 - (gp.tileSize/2);
         screenY = gp.screenHeight/2 - (gp.tileSize/2);
         //Size box character
@@ -166,5 +167,8 @@ public class Player extends Entity{
         }
         g2.drawImage(image, screenX, screenY, gp.tileSize, gp.tileSize, null);
 
+    }
+    public Point getPlayerPosition() {
+        return new Point(worldX, worldY);
     }
 }
